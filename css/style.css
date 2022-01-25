@@ -1,39 +1,54 @@
-.container {
-	width: 100%;
-	display:  flex;
-	flex-wrap: wrap;
+html, body {
+	box-sizing: border-box;
+}
+
+header .nav li {
+	margin-right: 1rem;
+
+}
+
+section{
+	padding: 4rem 0;
+}
+
+.contents .content-items{
+	display: flex;
 	justify-content: center;
-}
-body {
-	width: 1250px;
-}
-
-h1 {
-	text-align: center;
+	align-items: stretch;
+	flex-wrap: wrap;
 }
 
-li {
-	display: inline;
-	margin: 0 5 0 5;
+.contents .content-items .item-padding {
+	width: 33.33%;
+	padding: 2rem;
 }
 
-img {
-	width: 250px;
-	height: 250px;
+@media screen and (max-width: 992px) {
+	.contents .content-items .item-padding {
+		width: 50%;
+	}
 }
 
-.search{
-	float: right;
-	margin: 2 5 2 5;
-
+@media screen and (max-width: 768px) {
+	.contents .content-items .item-padding {
+		width: 100%;
+	}
 }
 
-.searchbutton {
-	float: right;
-	margin: 2 5 2 5;
-	background-color: lightblue;
+.contents .content-items .item-padding .item img {
+	width: 100%;
+	height: auto;
 }
 
+.contents .content-items .item-padding .item {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.35);
+	padding: 1rem;
+}
 
 .add {
 	background-color: yellow;
@@ -42,8 +57,5 @@ img {
 .buy {
 	background-color: orange;
 }
-
-.flex-item {
-	margin: 3 3 3 3;
 
 
